@@ -109,18 +109,37 @@ input:active {
     border: 2px solid #006633;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+.parrafo1-contenedor {
+margin-top: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+}
+
+.button-inicar {
+    width: 53%;
+    height: 50px;
+    padding: 10px;
+    background-color: #FFFFFF; 
+    color: rgba(77, 167, 104, 0.5);  
+    border: 1px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.button-inicar:hover {
+    background-image: linear-gradient(to right, #99E89D, #4DA768);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button-inicar:active {
+    background-image: linear-gradient(to right, #3BC975, #006633);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .social-login {
@@ -137,18 +156,30 @@ button:hover {
 }
 
 a {
-    color: #007bff;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 a:hover {
+    color: #4DA768;
+}
+
+a:active {
+    color: #26874E;
     text-decoration: underline;
 }
 
 .crear-cuenta-contenedor {
     display: flex;
-
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px;
 }
+
+.crear-cuenta-contenedor p {
+    margin: 0 30px; 
+}
+
 
 .boton-con-fondo {
     background-color: #FFFFFF; 

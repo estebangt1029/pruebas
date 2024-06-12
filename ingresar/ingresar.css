@@ -126,7 +126,6 @@ display: block;
     filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(544%) hue-rotate(116deg) brightness(90%) contrast(85%);
 }
 
-
 .button {
     width: 100px; /* Ancho del botón */
     height: 20px; /* Altura del botón */
@@ -212,6 +211,7 @@ p {
 
 .form-group {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 label {
@@ -221,10 +221,6 @@ label {
     font-weight: bold;
     text-align: start;
     margin-left: 230px;
-}
-
-.form-group {
-    text-align: center;
 }
 
 input[type="email"],

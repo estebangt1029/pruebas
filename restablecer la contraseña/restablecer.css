@@ -10,15 +10,19 @@ body {
     font-family: 'MiFuente';
 }
 
+
+/* PARTE DE LA PRIMER SECCION EL FORMULARIO DE RESTABLECER LA CONTRASEÑA*/
+
+/* Logo de la seccion */
 .logo {
     text-align: center;
     position: relative;
     margin-top: -150px;
 }
-
+/* Contenedor principal */
 .container {
     max-width: 900px;
-    min-height: 900px;
+    min-height: 1000px;
     margin: 100px auto;
     background-color: #fff;
     border-radius: 20px;
@@ -27,4 +31,125 @@ body {
     background-color: rgba(0, 0, 0, 0.2); 
     border: #99E89D solid 6px;
     flex-wrap: wrap;
+    margin-top: 250px;
 }
+
+/* Estilos para los títulos y los párrafos */
+h1 {
+    text-align: center;
+    color: #257236;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+    color: #4DA768;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h5 {
+    text-align: center;
+    color: #26874E;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 300px;
+    margin-top: -20px;
+}
+
+p {
+    text-align: center;
+    color: #257236;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Estilos para los campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4DA768;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 230px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 50%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(77, 167, 104, 0.5); 
+    font-weight: bold; 
+}
+
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none; 
+}
+
+input:hover {
+    border: 2px solid #26874E;
+}
+
+input:active {
+    border: 2px solid #006633;
+}
+
+/* Estilos para el ícono dentro del input */
+.input-icon {
+    position: absolute;
+    right: 20%;
+    cursor: pointer;
+}
+
+.ojos{
+    position: absolute;
+    margin-left: -45px;
+    margin-top: 13px;
+}
+
+/* Estilos para los botones de inciar sesion o enviar */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+}
+
+.button-inicar {
+    width: 53%;
+    height: 50px;
+    padding: 10px;
+    background-color: #FFFFFF; 
+    color: rgba(77, 167, 104, 0.5);  
+    border: 1px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.button-inicar:hover {
+    background-image: linear-gradient(to right, #99E89D, #4DA768);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button-inicar:active {
+    background-image: linear-gradient(to right, #3BC975, #006633);
+    color: rgba(255, 255, 255, 0.5);
+}
+

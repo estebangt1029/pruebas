@@ -13,6 +13,7 @@ body {
     align-items: center;
     background-color: #99E89D;
     padding: 18px 174px;
+    flex-wrap: wrap;
 }
 .navbar-logo {
     margin-right: 20px;
@@ -75,14 +76,13 @@ body {
     display: block;
 }
 .button {
-    width: 144px; /* Ancho del botón */
-    height: 44px; /* Altura del botón */
+    width: 100px; /* Ancho del botón */
+    height: 20px; /* Altura del botón */
     background-color: #FFFFFF;
     border: none;
-    color: black;
+    color: black !important; 
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 15px;
@@ -93,10 +93,13 @@ body {
 
 .button:hover {
     background-color: #4DA768;
+    color: black !important; 
 }
 
 .button:active {
     background-color: #26874E;
+    color: black !important; 
 }
+
 
 

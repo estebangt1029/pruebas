@@ -55,14 +55,37 @@ body {
     position: relative;
     display: inline-block;
 }
-.menu-contenedor  {
+
+/* Estas reglas CSS controlan la visibilidad del menú desplegable en función de la interacción del usuario:*/
+.Megamenu:focus+.menu-contenedor,  /* Muestra el menú desplegable cuando el enlace principal recibe el foco, por ejemplo, cuando se hace clic en él.*/
+.menu-contenedor:focus-within { /* Asegura que el menú desplegable permanezca visible si se enfoca cualquier elemento dentro de él.*/
+display: block;
+}
+
+.menu-contenedor {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    max-width: 86vw; 
+    height: 40%;
+    background-color: #006633;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    text-align: center;
 }
+
+.menu-contenedor h2 {
+    color: #FFFFFF;
+}
+
+.Mega {
+    color: #FFFFFF !important; 
+    font-weight: normal;
+}
+
 .menu-contenedor  a {
     color: black;
     padding: 12px 16px;
@@ -70,11 +93,37 @@ body {
     display: block;
 }
 .menu-contenedor  a:hover {
-    background-color: #f1f1f1;
+    color: #99E89D!important;
 }
+
+.menu-contenedor  a:active {
+    color: #26874E !important;
+}
+
 .menu:hover .menu-contenedor  {
     display: block;
 }
+
+.Vector {
+    margin-top: 50px;
+    left: 50%; /* Lo coloca en el centro horizontalmente */
+    transform: translateX(1200%); /* Lo ajusta para que esté centrado exactamente */
+}
+
+.Megamenu img {
+    transition: filter 0.3s;
+    margin-left: 5px;
+}
+
+.Megamenu:hover img {
+    filter: brightness(0) saturate(100%) invert(36%) sepia(55%) saturate(556%) hue-rotate(86deg) brightness(90%) contrast(85%);
+}
+
+.Megamenu:active img {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(544%) hue-rotate(116deg) brightness(90%) contrast(85%);
+}
+
+
 .button {
     width: 100px; /* Ancho del botón */
     height: 20px; /* Altura del botón */

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../restablecer la contraseña/Ubuntu-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../restablecer la contraseña/fondo.jpg') no-repeat;
+    font-family: 'MiFuente';
+}
+
+.logo {
+    text-align: center;
+    position: relative;
+    margin-top: -150px;
+}
+
+.container {
+    max-width: 900px;
+    min-height: 900px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: #99E89D solid 6px;
+    flex-wrap: wrap;
+}

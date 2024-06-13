@@ -353,17 +353,18 @@ a:active {
 }
 
 /*PARTE DE LA SEGUNDA SECCION LA INFROMACION DE MEGAPAQUETES*/
-.section  .contenedor-principal {
+.section .contenedor-principal{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Dividir el contenedor en tres columnas iguales */
-    grid-gap: 20px; /* Espacio entre las columnas */
-    grid-template-rows: auto auto auto; /* Tres filas automáticas */
-    background-color: #99E89D ;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-template-rows: auto; /* Filas automáticas */
+    gap: 20px; /* Espacio entre elementos */
+    background-color: #99E89D; 
+    padding: 20px;
 }
 
 .section  .contenedor-titulo {
     grid-column: span 3; 
-    margin-left: 20px; /* Espacio entre el logotipo y el título */
+    margin-left: 20px; 
 }
 
 .section  .contenedor-secundario {
@@ -374,12 +375,12 @@ a:active {
 
 .section  .imagen {
     grid-row: 2; 
-    grid-column: 1; 
+    grid-column: 1 ; 
 }
 
 .section  .contenedor-lista {
-    grid-row: 1; 
-    grid-column: 3; 
+    grid-row: 1;
+    grid-column: 2 / span 3; 
 }
 
 .section  .contenedor-parrafo01{
@@ -402,7 +403,7 @@ a:active {
     grid-column: 3; 
 }
 
-.minicontenedor h5{
+.minicontenedor {
     height: 150px;
     width: 350px;
     color: #FFFFFF;

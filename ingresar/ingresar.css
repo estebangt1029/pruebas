@@ -3,6 +3,22 @@
     src: url('../ingresar/Ubuntu-Regular.ttf') format('truetype');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-fondo-principal: #000000;
+    --color-texto-principal: #ffffff;
+    --color-primario: #99E89D;
+    --color-secundario: #006633;
+    --color-terciario: #4DA768;  
+    --color-acento-1: #26874E;  
+    --color-acento-2: #257236;  
+    --color-resaltado: #3BC975; 
+}
+
 body {
     margin: 0;
     padding: 0;

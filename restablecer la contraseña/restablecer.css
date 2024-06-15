@@ -3,99 +3,115 @@
     src: url('../restablecer la contraseña/Ubuntu-Regular.ttf') format('truetype');
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo-principal: #000000;
+    --color-texto-principal: #ffffff;
+    --color-primario: #99E89D;
+    --color-secundario: #006633;
+    --color-terciario: #4DA768;  
+    --color-acento-1: #26874E;  
+    --color-acento-2: #257236;  
+    --color-resaltado: #3BC975; 
+    --padding: 30px;
+    --paddin-button: 10px;
+    --margin-top: 30px;
+}
+
+body {
     background: url('../restablecer la contraseña/fondo.jpg') no-repeat;
     font-family: 'MiFuente';
 }
 
-
 /* PARTE DE LA PRIMER SECCION EL FORMULARIO DE RESTABLECER LA CONTRASEÑA*/
 
-/* Logo de la seccion */
-.logo {
-    text-align: center;
-    position: relative;
-    margin-top: -150px;
-}
-/* Contenedor principal */
-.container {
-    max-width: 900px;
-    min-height: 1000px;
+.additional-info {
+    max-width: 50%;
+    min-height: 50%;
     margin: 100px auto;
-    background-color: #fff;
+    background-color: var(--color-texto-principal);
     border-radius: 20px;
-    padding: 20px;
+    padding: var(--padding);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.2); 
-    border: #99E89D solid 6px;
+    border: var(--color-primario) solid 6px;
     flex-wrap: wrap;
     margin-top: 250px;
 }
 
-/* Estilos para los títulos y los párrafos */
-h1 {
+.additional-info__logo {
     text-align: center;
-    color: #257236;
-    font-weight: bold;
-    font-size: 50px;
+    position: relative;
+    margin-top: -150px;
 }
 
-h3 {
+.additional-info__title-principal{
     text-align: center;
-    color: #4DA768;
+    color: var(--color-acento-2);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
 }
 
-h5 {
+.additional-info__title {
     text-align: center;
-    color: #26874E;
+    color: var(--color-terciario);
+    font-weight: bold;
+    font-size: 25px;
+    padding: var(--padding);
+}
+
+.additional-info__subtitle {
+    text-align: center;
+    color: var(--color-acento-1);
     font-weight: bold;
     font-size: 17px;
     margin-left: 300px;
     margin-top: -20px;
 }
 
-p {
+.additional-info__instructions {
     text-align: center;
-    color: #257236;
+    color: var(--color-acento-1);
     font-weight: bold;
-    margin-top: 30px;
+    font-size: 15px;
+    padding: var(--padding);
 }
 
-/* Estilos para los campos de formulario */
-.form-group {
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: 30px;
+.additional-info__form-container{
+    padding: var(--padding);
 }
 
 label {
-    display: block;
     margin-bottom: 5px;
-    color: #4DA768;
+    color: var(--color-terciario);
     font-weight: bold;
-    text-align: start;
-    margin-left: 230px;
+    margin-left: 20%;
 }
 
+/* Asegurar que los inputs y buttons tengan el tamaño adecuado */
 input[type="email"],
 input[type="password"] {
-    width: 50%;
-    height: 30px;
-    padding: 10px;
+    width: calc(100% - 40px); 
+    max-width: 500px; 
+    min-height: 50px;
+    padding: var(--paddin-button);
     border: 1px solid #ccc;
     border-radius: 15px;
+    margin: 10px auto; 
+    display: block; 
 }
 
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
     color: rgba(77, 167, 104, 0.5); 
     font-weight: bold; 
+    padding: var(--paddin-button);
 }
-
 
 input[type="email"]:focus,
 input[type="password"]:focus {
@@ -103,39 +119,48 @@ input[type="password"]:focus {
 }
 
 input:hover {
-    border: 2px solid #26874E;
+    border: 2px solid var(--color-acento-1);
 }
 
 input:active {
-    border: 2px solid #006633;
+    border: 2px solid var(--color-secundario);
 }
 
-/* Estilos para el ícono dentro del input */
-.input-icon {
+.additional-info__form-group{
+    margin-bottom: 40px;
+}
+
+.additional-info__input-wrapper {
+    position: relative;
+}
+
+.additional-info__icon-button {
     position: absolute;
-    right: 20%;
-    cursor: pointer;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
 }
 
-.ojos{
-    position: absolute;
-    margin-left: -45px;
-    margin-top: 13px;
+.additional-info__icon {
+    width: 20px;
+    height: 20px;
+    margin-left: -358px;
 }
 
-/* Estilos para los botones de inciar sesion o enviar */
-.button-container {
+.additional-info__button-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px; 
 }
 
-.button-inicar {
-    width: 53%;
-    height: 50px;
-    padding: 10px;
-    background-color: #FFFFFF; 
+.additional-info__button {
+    width: calc(100% - 40px); 
+    max-width: 500px; 
+    min-height: 50px;
+    background-color: var(--color-texto-principal); 
     color: rgba(77, 167, 104, 0.5);  
     border: 1px solid #ccc;
     font-weight: bold;
@@ -143,13 +168,12 @@ input:active {
     border-radius: 15px;
 }
 
-.button-inicar:hover {
+.additional-info__button:hover {
     background-image: linear-gradient(to right, #99E89D, #4DA768);
     color: rgba(255, 255, 255, 0.5);
 }
 
-.button-inicar:active {
+.additional-info__button:active {
     background-image: linear-gradient(to right, #3BC975, #006633);
     color: rgba(255, 255, 255, 0.5);
 }
-

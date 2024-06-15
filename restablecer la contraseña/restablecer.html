@@ -11,68 +11,82 @@
     <link rel="icon" type="image/svg" href="../restablecer la contraseña/logo.svg">
 </head>
 <body>
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Contenedor del logo principal -->
-        <div class="logo">
-            <img src="../restablecer la contraseña/logo.png" alt="Logo">
+    <!-- Sección adicional con información -->
+    <section class="additional-info">
+        <div class="additional-info__main">
+            <div class="additional-info__secondary">
+                <!-- Logotipo en la sección adicional -->
+                <div class="additional-info__logo">
+                    <img src="../restablecer la contraseña/logo.png" alt="Logo">
+                </div>
+                 <!-- Contenedor del título de restablecer contraseña -->
+                  <div class="additional-info__title-principal">
+                    <h1>¡RESTABLECER LA CONTRASEÑA!</h1>
+                </div>
+                <!-- Contenedor del titulo -->
+                 <div class="additional-info__title">
+                    <h3><strong>MEGAPAQUETES</strong></h3>
+                </div>
+                <!-- Contenedor del párrafo con descripción -->
+                 <div class="additional-info__subtitle">
+                    <h5>FRUTAS . VERDURAS . TUBÉRCULOS . HORTALIZAS</h5>
+                </div>
+            </div>
+            <!-- Instrucciones -->
+            <div class="additional-info__instructions">
+                <p>Ingresa tu correo electrónico que has usado para <br> registrarte en la plataforma</p>
+            </div>
+            <!-- Formulario de restablecimiento -->
+            <div class="additional-info__form-container">
+                <form class="additional-info__form" action="#" method="POST">
+                    <!-- Campo de correo electrónico -->
+                    <div class="additional-info__form-group">
+                        <label class="additional-info__label" for="email">Correo</label>
+                        <input class="additional-info__input" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                    </div>
+                    <!-- Título de la sección de cambio de contraseña -->
+                    <div class="additional-info__instructions">
+                        <p>Cambiar contraseña</p>
+                    </div>
+                    <!-- Campo para la contraseña anterior con ícono -->
+                    <div class="additional-info__form-group">
+                        <label class="additional-info__label" for="password">Contraseña anterior que recuerdes</label>
+                        <div class="additional-info__input-wrapper">
+                            <input class="additional-info__input" type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                            <button type="button" class="additional-info__icon-button">
+                                <img class="additional-info__icon" src="../restablecer la contraseña/eye.svg" alt="Mostrar contraseña">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Campo para la nueva contraseña con ícono -->
+                    <div class="additional-info__form-group">
+                        <label class="additional-info__label" for="new-password">Nueva contraseña</label>
+                        <div class="additional-info__input-wrapper">
+                            <input class="additional-info__input" type="password" id="new-password" name="new-password" placeholder="Ingresa tu nueva contraseña" required>
+                            <button type="button" class="additional-info__icon-button">
+                                <img class="additional-info__icon" src="../restablecer la contraseña/eye.svg" alt="Mostrar contraseña">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Campo para confirmar la contraseña -->
+                    <div class="additional-info__form-group">
+                        <input class="additional-info__input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
+                    </div>
+                    <!-- Botón para enviar el formulario -->
+                    <div class="additional-info__button-container">
+                        <button class="additional-info__button additional-info__button--submit" type="submit">Enviar</button>
+                    </div>
+                    <!-- Botón para iniciar sesión -->
+                    <div class="additional-info__button-container">
+                        <button class="additional-info__button additional-info__button--login" type="button">Iniciar Sesión</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- Título principal -->
-        <div class="titulo-contenedor">
-            <h1>¡RESTABLECER LA CONTRASEÑA!</h1>
-        </div>
-        <!-- Subtítulo -->
-        <div class="subtitulo-contenedor">
-            <h3><strong>MEGAPAQUETES</strong></h3>
-        </div>
-        <!-- Contenedor del párrafo con descripción -->
-        <div class="parrafo-contenedor">
-            <h5>FRUTAS   .    VERDURAS   .   TUBERCULOS   .   HORTALIZAS</h5>
-        </div>
-        <!-- Instrucciones -->
-        <div class="parrafo-contenedor01">
-            <p>Ingresa tu correo electrónico que has usado para <br> registrarte en la plataforma</p>
-        </div>
-        <!-- Formulario de restablecimiento -->
-        <div class="formulario-contenedor">
-            <form action="#" method="POST">
-                <!-- Campo de correo electrónico -->
-                <div class="form-group">
-                    <label for="email">Correo</label>
-                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo"  required>
-                </div>
-                <!-- Título de la sección de cambio de contraseña -->
-                <div class="parrafo-contenedor01">
-                    <p>Cambiar contraseña</p>
-                </div>
-                <!-- Campo para la contraseña anterior con ícono -->
-                <div class="form-group">
-                    <label for="password">Contraseña anterior que recuerdes</label>
-                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-                    <img class="ojos" src="../restablecer la contraseña/eye.svg" alt="Logo" class="input-icon">
-                </div>
-                <!-- Campo para la nueva contraseña con ícono -->
-                <div class="form-group">
-                    <label for="new-password">Nueva contraseña</label>
-                    <input type="password" id="new-password" name="new-password" placeholder="Ingresa tu nueva contraseña" required>
-                    <img class="ojos" src="../restablecer la contraseña/eye.svg" alt="Logo" class="input-icon">
-                </div>
-                <!-- Campo para la confirmar la contraseña  -->
-                <div class="form-group">
-                    <input type="password" id="new-password" name="new-password" placeholder="Confirmar contraseña" style="margin-top: 20px;" required>
-                </div>
-                <!-- Botón para enviar el formulario -->
-                <div class="button-container">
-                    <button class="button-inicar" type="submit">Enviar</button>
-                </div>
-                <!-- Botón para iniciar seccion -->
-                <div class="button-container">
-                    <button class="button-inicar" type="submit">Iniciar Sesión</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    </section>
 </body>
 </html>
+
+
 
 

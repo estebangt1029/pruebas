@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -17,11 +18,12 @@
     --color-acento-1: #26874E;  
     --color-acento-2: #257236;  
     --color-resaltado: #3BC975; 
+    --padding: 30px;
+    --paddin-button: 10px;
+    --margin-top: 30px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: url('../ingresar/fondo.jpg') no-repeat;
     font-family: 'MiFuente';
 }
@@ -30,228 +32,210 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #99E89D;
-    padding: 18px 174px;
+    justify-content: space-between;
+    background-color: var(--color-primario);
+    padding: 18px 30px;
     flex-wrap: wrap;
 }
-.navbar-logo {
-    margin-right: 20px;
-}
-.navbar-logo img {
+
+.navbar__logo img {
     height: 40px;
 }
-.navbar-titulo {
-    color: #000000;
+
+.navbar__contenedor {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-fondo-principal);
+}
+
+.navbar__title  {
     font-size: 16px;
-    margin-right: auto;
-    font-weight: bold;
-    margin-top: 10px;
 }
-.navbar-subtitulo {
-    color: #000000;
+
+.navbar__subtitle {
     font-size: 11px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    padding: 0px 27px;
 }
-.navbar a {
-    color: #000000;
+
+.navbar__link, .menu__toggle {
+    color: var(--color-fondo-principal);
     padding: 14px 20px;
     font-size: 16px;
     text-decoration: none;
-    display: inline-block;
     font-weight: bold;
 }
-.navbar a:hover {
-    color: #26874E;
+
+.navbar__link:hover, .menu__toggle:hover {
+    color: var(--color-acento-1);
 }
-.navbar a:active {
-    color: #006633;
+
+.navbar__link:active, .menu__toggle:active {
+    color: var(--color-secundario);
     text-decoration: underline solid;
 }
 
+/* Menú desplegable */
 .menu {
     position: relative;
     display: inline-block;
 }
 
-/* Estas reglas CSS controlan la visibilidad del menú desplegable en función de la interacción del usuario:*/
-.Megamenu:focus+.menu-contenedor,  /* Muestra el menú desplegable cuando el enlace principal recibe el foco, por ejemplo, cuando se hace clic en él.*/
-.menu-contenedor:focus-within { /* Asegura que el menú desplegable permanezca visible si se enfoca cualquier elemento dentro de él.*/
-display: block;
-}
-
-.menu-contenedor {
+.menu__container {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    width: 100vw; 
-    max-width: 86vw; 
-    height: 40%;
-    background-color: #006633;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-secundario);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    text-align: center;
+    text-align: left;
 }
 
-.menu-contenedor h2 {
-    color: #FFFFFF;
+.menu__container h2 {
+    color: var(--color-texto-principal);
+    margin: 10px;
 }
 
-.Mega {
-    color: #FFFFFF !important; 
-    font-weight: normal;
-}
-
-.menu-contenedor  a {
-    color: black;
+.menu__link {
+    color: var(--color-texto-principal);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.menu-contenedor  a:hover {
-    color: #99E89D!important;
+
+.menu__link:hover {
+    background-color: var(--color-terciario);
 }
 
-.menu-contenedor  a:active {
-    color: #26874E !important;
+.menu__link:active {
+    background-color: var(--color-acento-2);
 }
 
-.menu:hover .menu-contenedor  {
+.menu__toggle:hover + .menu__container, 
+.menu__container:hover {
     display: block;
 }
 
-.Vector {
-    margin-top: 50px;
-    left: 50%; /* Lo coloca en el centro horizontalmente */
-    transform: translateX(1200%); /* Lo ajusta para que esté centrado exactamente */
+.menu__vector {
+    margin: 10px;
 }
 
-.Megamenu img {
-    transition: filter 0.3s;
-    margin-left: 5px;
-}
-
-.Megamenu:hover img {
-    filter: brightness(0) saturate(100%) invert(36%) sepia(55%) saturate(556%) hue-rotate(86deg) brightness(90%) contrast(85%);
-}
-
-.Megamenu:active img {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(544%) hue-rotate(116deg) brightness(90%) contrast(85%);
+.menu__heading {
+    margin: 10px 0;
 }
 
 .button {
-    width: 100px; /* Ancho del botón */
-    height: 20px; /* Altura del botón */
-    background-color: #FFFFFF;
-    border: none;
-    color: black !important; 
+    background-color: var(--color-texto-principal);
+    color: var(--color-fondo-principal);
     padding: 10px 20px;
+    border-radius: 10px;
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 15px;
-    cursor: pointer;
     font-weight: bold;
-    border-radius: 10px; 
+    text-decoration: none;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: #4DA768;
-    color: black !important; 
+    background-color: var(--color-terciario);
 }
 
 .button:active {
-    background-color: #26874E;
-    color: black !important; 
+    background-color: var(--color-acento-1);
 }
 
 
 /*PARTE DE LA PRIMER SECCION EL FORMULARIO DE INGRESO*/
-.logo {
+
+.welcome {
+    max-width: 50%;
+    min-height: 50%;
+    margin: 100px auto;
+    background-color: var(--color-texto-principal);
+    border-radius: 20px;
+    padding: var(--padding);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: var(--color-primario) solid 6px;
+    flex-wrap: wrap;
+    margin-top: 250px;
+}
+
+.welcome__logo {
     text-align: center;
     position: relative;
     margin-top: -150px;
 }
 
-.container {
-    max-width: 900px;
-    min-height: 900px;
-    margin: 100px auto;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.2); 
-    border: #99E89D solid 6px;
-    flex-wrap: wrap;
-    margin-top: 250px;
-}
-
-h1 {
+.welcome__title {
     text-align: center;
-    color: #257236;
+    color: var(--color-acento-2);
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
 }
 
-h3 {
+.welcome__subtitle {
     text-align: center;
-    color: #4DA768;
+    color: var(--color-terciario);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
+    padding: var(--padding);
 }
 
-h5 {
+.welcome__description {
     text-align: center;
-    color: #26874E;
+    color: var(--color-acento-1);
     font-weight: bold;
     font-size: 17px;
     margin-left: 300px;
     margin-top: -20px;
 }
 
-p {
+.form {
+    padding: var(--padding);
+}
+.form__alternative{
+    padding: var(--padding);
+}
+
+.parrafo {
     text-align: center;
-    color: #257236;
+    color: var(--color-acento-2);
     font-weight: bold;
 }
 
-.recuperar-contenedor {
+.recover-password {
     text-align: center;
-    color: #FFFFFF;
+    color: var(--color-texto-principal);
     font-weight: bold;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: center;
+    padding: var(--padding);
 }
 
 label {
-    display: block;
     margin-bottom: 5px;
-    color: #4DA768;
+    color: var(--color-terciario);
     font-weight: bold;
-    text-align: start;
-    margin-left: 230px;
+    margin-left: 20%;
 }
 
+/* Asegurar que los inputs y buttons tengan el tamaño adecuado */
 input[type="email"],
 input[type="password"] {
-    width: 50%;
-    height: 30px;
-    padding: 10px;
+    width: calc(100% - 40px); 
+    max-width: 500px; 
+    min-height: 50px;
+    padding: var(--paddin-button);
     border: 1px solid #ccc;
     border-radius: 15px;
+    margin: 10px auto; 
+    display: block; 
 }
 
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
     color: rgba(77, 167, 104, 0.5); 
     font-weight: bold; 
+    padding: var(--paddin-button);
 }
 
 
@@ -261,29 +245,25 @@ input[type="password"]:focus {
 }
 
 input:hover {
-    border: 2px solid #26874E;
+    border: 2px solid var(--color-acento-1);
 }
 
 input:active {
-    border: 2px solid #006633;
+    border: 2px solid var(--color-secundario);
 }
 
-.parrafo1-contenedor {
-margin-top: 10px;
-}
-
-.button-container {
+.form__button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px; 
 }
 
-.button-inicar {
-    width: 53%;
-    height: 50px;
-    padding: 10px;
-    background-color: #FFFFFF; 
+.button-button--submit {
+    width: calc(100% - 40px); 
+    max-width: 500px; 
+    min-height: 50px;
+    background-color: var(--color-texto-principal); 
     color: rgba(77, 167, 104, 0.5);  
     border: 1px solid #ccc;
     font-weight: bold;
@@ -291,150 +271,239 @@ margin-top: 10px;
     border-radius: 15px;
 }
 
-.button-inicar:hover {
+.button-button--submit:hover {
     background-image: linear-gradient(to right, #99E89D, #4DA768);
     color: rgba(255, 255, 255, 0.5);
 }
 
-.button-inicar:active {
+.button-button--submit:active {
     background-image: linear-gradient(to right, #3BC975, #006633);
     color: rgba(255, 255, 255, 0.5);
 }
 
 .social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: -25px;
 }
 
-.social-login button {
+.social-login__button {
+    width: 25%;
     margin: 5px;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    border: 4px solid #FFFFFF;
-    background-color: transparent !important;
+    border: 2px solid var(--color-texto-principal);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto-principal);
 }
 
-.crear-cuenta-contenedor {
+.social-login__button img {
+    margin-right: 10px; 
+    max-height: 20px; 
+}
+
+.create-account {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-top: 50px;
+    padding: var(--padding);
 }
 
-.crear-cuenta-contenedor p {
-    margin: 0 30px; 
+.create-account .parrafo {
+    margin-right: 30px; 
+    color: var(--color-acento-2); /
 }
 
-a {
-    color: #FFFFFF;
+.recover-password__link {
+    color: var(--color-texto-principal);
     text-decoration: none;
 }
 
-a:hover {
-    color: #4DA768;
+.recover-password__link:hover {
+    color: var(--color-terciario);
 }
 
-a:active {
-    color: #26874E;
+.recover-password__link:active {
+    color: var(--color-acento-1);
     text-decoration: underline;
 }
 
-
-.boton-con-fondo {
-    background-color: #FFFFFF; 
+.create-account__link {
+    background-color: var(--color-texto-principal); 
     color: rgba(77, 167, 104, 0.5);  
     text-decoration: none;
     border-radius: 15px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    width: 15%;
-    height:30px;
-    padding: 10px;
+    padding: 12px 20px;
     text-align: center;
     border: 1px solid #ccc;
-    line-height: 30px;
+    width: 150px;
 }
 
-.boton-con-fondo:hover {
+.create-account__link:hover {
     background-image: linear-gradient(to right, #99E89D, #4DA768);
     color: rgba(255, 255, 255, 0.5);
 }
 
-.boton-con-fondo:active {
+.create-account__link:active {
     background-image: linear-gradient(to right, #3BC975, #006633);
     color: rgba(255, 255, 255, 0.5);
 }
 
 /*PARTE DE LA SEGUNDA SECCION LA INFROMACION DE MEGAPAQUETES*/
-.section .contenedor-principal{
+.additional-info {
+    background-color: #99E89D;
+    padding: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+/* Estilo para el contenido principal */
+.additional-info__main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-template-rows: auto; /* Filas automáticas */
-    gap: 20px; /* Espacio entre elementos */
-    background-color: #99E89D; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
     padding: 20px;
 }
 
-.section  .contenedor-titulo {
-    grid-column: span 3; 
-    margin-left: 20px; 
+.additional-info__secondary{
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
 }
 
-.section  .contenedor-secundario {
+.additional-info__title {
+    flex: 1; 
+}
+
+.additional-info__subtitle {
+    font-size: 14px; 
+    color: var(--color-fondo-principal); 
+}
+
+.additional-info__logo img {
+    max-width: 60px;
+    height: auto;
+}
+
+.additional-info__image img {
+    max-width: 100%; 
+    display: block; 
+    border-radius: 10px; 
+}
+
+.additional-info__image {
+    grid-column: 1; 
+    grid-row: 2;
+}
+
+.additional-info__nav-list {
+    grid-column: 3; 
+    font-weight: bold;
+}
+
+.additional-info__store-info {
+    grid-column: 3;
+    margin-top: 30px;
+}
+.additional-info__nav-item {
+    margin-bottom: 10px; 
+    color: var(--color-fondo-principal); 
+}
+
+.additional-info__heading {
+    color: var(--color-fondo-principal); 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+.additional-info__contact {
     display: flex;
-    flex-direction: row; 
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    font-weight: bold;
+}
+
+.additional-info__heading {
+    color: var(--color-fondo-principal);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.additional-info__contact-item {
+    color: var(--color-fondo-principal);
+    margin-bottom: 5px;
+    display: flex;
     align-items: center;
 }
 
-.section  .imagen {
-    grid-row: 2; 
-    grid-column: 1 ; 
+.additional-info__contact-item img {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 
-.section  .contenedor-lista {
-    grid-row: 1;
-    grid-column: 2 / span 3; 
+.additional-info__text_1 {
+    background-color: var(--color-terciario);
+    width: 73%;
+    border-radius: 10px;
+    padding: var(--paddin-button);
+    color: var(--color-texto-principal);
+    text-align: start; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-size: 17px;
 }
 
-.section  .contenedor-parrafo01{
-    grid-row: 2; 
-    grid-column: 3; 
+.additional-info__social {
+    display: flex; /* Cambiar al modelo de caja flex */
+    flex-direction: column; /* Apilar los elementos verticalmente */
 }
 
-.section  .contenedor-parrafo02 {
-    grid-row: 3; 
-    grid-column: 1; 
+.additional-info__heading {
+    color: var(--color-fondo-principal); /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
 }
 
-.section .contenedor-parrafo03 {
-    grid-row: 3; 
-    grid-column: 2; 
+.additional-info__text {
+    color: var(--color-fondo-principal); /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
 }
 
-.section  .contenedor-parrafo04 {
-    grid-row: 3; 
-    grid-column: 3; 
+.additional-info__social-icons {
+    display: flex; 
+    flex-direction: row; 
+    margin-left: -13px;
 }
 
-.minicontenedor {
-    height: 150px;
-    width: 350px;
-    color: #FFFFFF;
-    background-color: #4DA768;
-    border-radius: 15px;
-    text-align: start;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.decoraccion {
-    color:black
+.additional-info__social-icon {
+    width: 70px; 
+    height: auto; 
+    cursor: pointer;  
+    margin-right: -10px 
 }
 
 /*PARTE DEL PIE DE PAGINA*/
 .footer {
     height: 140px;
     background: url('../ingresar/footer.png') no-repeat;
+    display: flex; /* Convertir .footer en un contenedor flex */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+.footer__parrafo {
+    text-align: center; /* Alinear texto al centro */
+    font-weight: bold;
 }

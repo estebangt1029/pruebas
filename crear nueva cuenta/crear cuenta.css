@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../ingresar/Ubuntu-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo-principal: #000000;
+    --color-texto-principal: #ffffff;
+    --color-primario: #99E89D;
+    --color-secundario: #006633;
+    --color-terciario: #4DA768;  
+    --color-acento-1: #26874E;  
+    --color-acento-2: #257236;  
+    --color-resaltado: #3BC975; 
+    --padding: 30px;
+    --paddin-button: 10px;
+    --margin-top: 30px;
+}
+
+body {
+    background: url('../ingresar/fondo.jpg') no-repeat;
+    font-family: 'MiFuente';
+}
+
+/*PARTE DE LA PRIMER SECCION EL FORMULARIO DE CREAR CUENTA NUEVA*/
+
+.create-account-section {
+    max-width: 50%;
+    min-height: 50%;
+    margin: 100px auto;
+    background-color: var(--color-texto-principal);
+    border-radius: 20px;
+    padding: var(--padding);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: var(--color-primario) solid 6px;
+    flex-wrap: wrap;
+    margin-top: 250px;
+}
+
+.logo-container {
+    text-align: center;
+    position: relative;
+    margin-top: -150px;
+}
+
+.title-container {
+    text-align: center;
+    color: var(--color-acento-2);
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.subtitle-container {
+    text-align: center;
+    color: var(--color-terciario);
+    font-weight: bold;
+    font-size: 25px;
+    padding: var(--padding);
+}
+
+.description-container {
+    text-align: center;
+    color: var(--color-acento-1);
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 300px;
+    margin-top: -20px;
+}
+
+.form {
+    padding: var(--padding);
+}
+.form__alternative{
+    padding: var(--padding);
+}
+
+.parrafo {
+    text-align: center;
+    color: var(--color-acento-2);
+    font-weight: bold;
+}
+
+.recover-password {
+    text-align: center;
+    color: var(--color-texto-principal);
+    font-weight: bold;
+    padding: var(--padding);
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--color-terciario);
+    font-weight: bold;
+    margin-left: 20%;
+}
+
+/* Asegurar que los inputs y buttons tengan el tamaño adecuado */
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 40px); 
+    max-width: 500px; 
+    min-height: 50px;
+    padding: var(--paddin-button);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 10px auto; 
+    display: block; 
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(77, 167, 104, 0.5); 
+    font-weight: bold; 
+    padding: var(--paddin-button);
+}
+
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none; 
+}
+
+input:hover {
+    border: 2px solid var(--color-acento-1);
+}
+
+input:active {
+    border: 2px solid var(--color-secundario);
+}

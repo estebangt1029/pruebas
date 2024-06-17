@@ -377,7 +377,6 @@ input:active {
     grid-auto-rows: minmax(100px, auto);
     gap: 20px;
     padding: 20px;
-    background-color: aqua;
 }
 
 .additional-info__secondary{

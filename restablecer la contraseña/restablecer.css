@@ -28,9 +28,126 @@ body {
     font-family: 'MiFuente';
 }
 
+/*PARTE DEL MENU DE NAVEGACION*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primario);
+    padding: 18px 30px;
+    flex-wrap: wrap;
+}
+
+.navbar__logo img {
+    height: 40px;
+}
+
+.navbar__contenedor {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-fondo-principal);
+}
+
+.navbar__title  {
+    font-size: 16px;
+}
+
+.navbar__subtitle {
+    font-size: 11px;
+}
+
+.navbar__link, .menu__toggle {
+    color: var(--color-fondo-principal);
+    padding: 14px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar__link:hover, .menu__toggle:hover {
+    color: var(--color-acento-1);
+}
+
+.navbar__link:active, .menu__toggle:active {
+    color: var(--color-secundario);
+    text-decoration: underline solid;
+}
+
+/* Menú desplegable */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-secundario);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.menu__container h2 {
+    color: var(--color-texto-principal);
+    margin: 10px;
+}
+
+.menu__link {
+    color: var(--color-texto-principal);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu__link:hover {
+    background-color: var(--color-terciario);
+}
+
+.menu__link:active {
+    background-color: var(--color-acento-2);
+}
+
+.menu__toggle:hover + .menu__container, 
+.menu__container:hover {
+    display: block;
+}
+
+.menu__vector {
+    margin: 10px;
+}
+
+.menu__heading {
+    margin: 10px 0;
+}
+
+.button {
+    background-color: var(--color-texto-principal);
+    color: var(--color-fondo-principal);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-terciario);
+}
+
+.button:active {
+    background-color: var(--color-acento-1);
+}
+
 /* PARTE DE LA PRIMER SECCION EL FORMULARIO DE RESTABLECER LA CONTRASEÑA*/
 
-.additional-info {
+/* Estilos para la sección de restablecer contraseña */
+.restablecer-section {
     max-width: 50%;
     min-height: 50%;
     margin: 100px auto;
@@ -44,20 +161,20 @@ body {
     margin-top: 250px;
 }
 
-.additional-info__logo {
+.restablecer-section__logo {
     text-align: center;
     position: relative;
     margin-top: -150px;
 }
 
-.additional-info__title-principal{
+.restablecer-section__title-principal {
     text-align: center;
     color: var(--color-acento-2);
     font-weight: bold;
     font-size: 35px;
 }
 
-.additional-info__title {
+.restablecer-section__title {
     text-align: center;
     color: var(--color-terciario);
     font-weight: bold;
@@ -65,7 +182,7 @@ body {
     padding: var(--padding);
 }
 
-.additional-info__subtitle {
+.restablecer-section__subtitle {
     text-align: center;
     color: var(--color-acento-1);
     font-weight: bold;
@@ -74,7 +191,7 @@ body {
     margin-top: -20px;
 }
 
-.additional-info__instructions {
+.restablecer-section__instructions {
     text-align: center;
     color: var(--color-acento-1);
     font-weight: bold;
@@ -82,11 +199,11 @@ body {
     padding: var(--padding);
 }
 
-.additional-info__form-container{
+.restablecer-section__form-container {
     padding: var(--padding);
 }
 
-label {
+.restablecer-section__label {
     margin-bottom: 5px;
     color: var(--color-terciario);
     font-weight: bold;
@@ -94,8 +211,7 @@ label {
 }
 
 /* Asegurar que los inputs y buttons tengan el tamaño adecuado */
-input[type="email"],
-input[type="password"] {
+.restablecer-section__input {
     width: calc(100% - 40px); 
     max-width: 500px; 
     min-height: 50px;
@@ -106,35 +222,34 @@ input[type="password"] {
     display: block; 
 }
 
-input[type="email"]::placeholder,
-input[type="password"]::placeholder {
+.restablecer-section__input[type="email"]::placeholder,
+.restablecer-section__input[type="password"]::placeholder {
     color: rgba(77, 167, 104, 0.5); 
     font-weight: bold; 
     padding: var(--paddin-button);
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
+.restablecer-section__input:focus {
     outline: none; 
 }
 
-input:hover {
+.restablecer-section__input:hover {
     border: 2px solid var(--color-acento-1);
 }
 
-input:active {
+.restablecer-section__input:active {
     border: 2px solid var(--color-secundario);
 }
 
-.additional-info__form-group{
+.restablecer-section__form-group {
     margin-bottom: 40px;
 }
 
-.additional-info__input-wrapper {
+.restablecer-section__input-wrapper {
     position: relative;
 }
 
-.additional-info__icon-button {
+.restablecer-section__icon-button {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -143,37 +258,188 @@ input:active {
     border: none;
 }
 
-.additional-info__icon {
+.restablecer-section__icon {
     width: 20px;
     height: 20px;
     margin-left: -358px;
 }
 
-.additional-info__button-container{
+.restablecer-section__button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px; 
 }
 
-.additional-info__button {
+.restablecer-section__button01 {
     width: calc(100% - 40px); 
     max-width: 500px; 
     min-height: 50px;
     background-color: var(--color-texto-principal); 
     color: rgba(77, 167, 104, 0.5);  
-    border: 1px solid #ccc;
-    font-weight: bold;
-    cursor: pointer;
     border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ccc;
 }
 
-.additional-info__button:hover {
+.restablecer-section__button01:hover {
     background-image: linear-gradient(to right, #99E89D, #4DA768);
     color: rgba(255, 255, 255, 0.5);
 }
 
-.additional-info__button:active {
+.restablecer-section__button01:active {
     background-image: linear-gradient(to right, #3BC975, #006633);
     color: rgba(255, 255, 255, 0.5);
+}
+
+/*PARTE DE LA SEGUNDA SECCION LA INFROMACION DE MEGAPAQUETES*/
+.additional-info {
+    background-color: #99E89D;
+    padding: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+/* Estilo para el contenido principal */
+.additional-info__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    padding: 20px;
+}
+
+.additional-info__secondary{
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.additional-info__title {
+    flex: 1; 
+}
+
+.additional-info__subtitle {
+    font-size: 14px; 
+    color: var(--color-fondo-principal); 
+}
+
+.additional-info__logo img {
+    max-width: 60px;
+    height: auto;
+}
+
+.additional-info__image img {
+    max-width: 100%; 
+    display: block; 
+    border-radius: 10px; 
+}
+
+.additional-info__image {
+    grid-column: 1; 
+    grid-row: 2;
+}
+
+.additional-info__nav-list {
+    grid-column: 3; 
+    font-weight: bold;
+}
+
+.additional-info__store-info {
+    grid-column: 3;
+    margin-top: 30px;
+}
+.additional-info__nav-item {
+    margin-bottom: 10px; 
+    color: var(--color-fondo-principal); 
+}
+
+.additional-info__heading {
+    color: var(--color-fondo-principal); 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+.additional-info__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    font-weight: bold;
+}
+
+.additional-info__heading {
+    color: var(--color-fondo-principal);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.additional-info__contact-item {
+    color: var(--color-fondo-principal);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.additional-info__contact-item img {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.additional-info__text_1 {
+    background-color: var(--color-terciario);
+    width: 73%;
+    border-radius: 10px;
+    padding: var(--paddin-button);
+    color: var(--color-texto-principal);
+    text-align: start; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-size: 17px;
+}
+
+.additional-info__social {
+    display: flex; /* Cambiar al modelo de caja flex */
+    flex-direction: column; /* Apilar los elementos verticalmente */
+}
+
+.additional-info__heading {
+    color: var(--color-fondo-principal); /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+.additional-info__text {
+    color: var(--color-fondo-principal); /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
+.additional-info__social-icons {
+    display: flex; 
+    flex-direction: row; 
+    margin-left: -13px;
+}
+
+.additional-info__social-icon {
+    width: 70px; 
+    height: auto; 
+    cursor: pointer;  
+    margin-right: -10px 
+}
+
+/*PARTE DEL PIE DE PAGINA*/
+.footer {
+    height: 140px;
+    background: url('../ingresar/footer.png') no-repeat;
+    display: flex; /* Convertir .footer en un contenedor flex */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+.footer__parrafo {
+    text-align: center; /* Alinear texto al centro */
+    font-weight: bold;
 }

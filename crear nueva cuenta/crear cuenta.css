@@ -28,11 +28,8 @@
 
 /* Estilos generales del cuerpo del documento */
 body {
-    background: url('../imagenes/fondo.jpg'); /* Imagen de fondo */
+    background: url('../imagenes/fondo crear cuenta.png'); /* Imagen de fondo */
     background-repeat: no-repeat;             /* No repetir el fondo */
-    background-position: center center;       /* Posición central del fondo */
-    background-size: cover;                   /* Cubrir todo el contenedor */
-    background-attachment: fixed;             /* Fondo fijo mientras se desplaza la página */
     font-family: 'MiFuente';                  /* Fuente personalizada */
 }
 

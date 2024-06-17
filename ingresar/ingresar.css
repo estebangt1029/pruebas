@@ -28,7 +28,7 @@
 
 /* Estilos generales del cuerpo del documento */
 body {
-    background: url('../imagenes/fondo.jpg'); /* Imagen de fondo */
+    background: url('../imagenes/fondo de ingresar.png'); /* Imagen de fondo */
     background-repeat: no-repeat;             /* No repetir el fondo */
     font-family: 'MiFuente';                  /* Fuente personalizada */
 }

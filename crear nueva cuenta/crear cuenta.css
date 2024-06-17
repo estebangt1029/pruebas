@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MiFuente';
-    src: url('../ingresar/Ubuntu-Regular.ttf') format('truetype');
+    src: url('../imagenes/Ubuntu-Regular.ttf') format('truetype');
 }
 
 * {
@@ -25,7 +25,7 @@
 
 body {
     /* URL de tu imagen de fondo */
-    background: url('../ingresar/fondo.jpg');
+    background: url('../imagenes/fondo.jpg');
     
     /* La imagen no se repite y ocupa todo el espacio disponible */
     background-repeat: no-repeat;
@@ -495,7 +495,7 @@ textarea:active {
 /*PARTE DEL PIE DE PAGINA*/
 .footer {
     height: 140px;
-    background: url('../ingresar/footer.png') no-repeat;
+    background: url('../imagenes/footer.png') no-repeat;
     display: flex; /* Convertir .footer en un contenedor flex */
     justify-content: center; /* Centrar contenido horizontalmente */
     align-items: center; /* Centrar contenido verticalmente */

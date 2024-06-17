@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MiFuente';
-    src: url('../ingresar/Ubuntu-Regular.ttf') format('truetype');
+    src: url('../imagenes/Ubuntu-Regular.ttf') format('truetype');
 }
 
 * {
@@ -24,7 +24,7 @@
 }
 
 body {
-    background: url('../ingresar/fondo.jpg') no-repeat;
+    background: url('../imagenes/fondo.jpg') no-repeat;
     font-family: 'MiFuente';
 }
 
@@ -497,7 +497,7 @@ input:active {
 /*PARTE DEL PIE DE PAGINA*/
 .footer {
     height: 140px;
-    background: url('../ingresar/footer.png') no-repeat;
+    background: url('../imagenes/footer.png') no-repeat;
     display: flex; /* Convertir .footer en un contenedor flex */
     justify-content: center; /* Centrar contenido horizontalmente */
     align-items: center; /* Centrar contenido verticalmente */

@@ -153,3 +153,69 @@ body {
 .button:active {
     background-color: var(--color-acento-1); /* Color de fondo al hacer clic */
 }
+
+/*PARTE DE LA SECCION PRINCIPAL DE LA PAGINA*/
+
+.contenedor__title {
+    /* Estilos del título dentro del contenedor de bienvenida */
+    text-align: start; /* Alinear al centro */
+    color: var(--color-fondo-principal); /* Color de acento 2 */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 40px; /* Tamaño de fuente */
+    margin-left: 300px; /* Margen izquierdo específico */
+    margin-top: 200px;
+}
+
+.contenedor__subtitle {
+    /* Estilos del subtítulo dentro del contenedor de bienvenida */
+    text-align: start; /* Alinear al centro */
+    color: var(--color-fondo-principal); /* Color terciario */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 25px; /* Tamaño de fuente */
+    margin-left: 300px; /* Margen izquierdo específico */
+    margin-top: 20px;
+}
+
+.contenedor__description {
+    /* Estilos de la descripción dentro del contenedor de bienvenida */
+    text-align: start; /* Alinear al centro */
+    color: var(--color-fondo-principal); /* Color de acento 1 */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 17px; /* Tamaño de fuente */
+    margin-left: 300px; /* Margen izquierdo específico */
+    margin-top: 20px;
+}
+
+.boton-continuar{
+    margin-top: 100px;
+}
+
+.boton-continuar__link {
+    width: 800px; /* Ancho máximo */
+    height: 50px; /* Altura mínima */
+    background-color: var(--color-texto-principal); /* Color de fondo principal */
+    color: rgba(77, 167, 104, 0.5); /* Color de texto semi-transparente */
+    border: 1px solid #ccc; /* Borde sólido con color gris */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor apuntador */
+    border-radius: 15px; /* Radio del borde */
+    text-decoration: none;
+}
+
+.boton-continuar__link:hover {
+    /* Estilos para cuando el mouse está sobre el botón de envío del formulario */
+    background-image: linear-gradient(to right, #99E89D, #4DA768); /* Gradiente de color de fondo */
+    color: rgba(255, 255, 255, 0.5); /* Color de texto semi-transparente */
+}
+
+.boton-continuar__link:active {
+    /* Estilos para cuando el botón de envío del formulario está activo (haciendo clic) */
+    background-image: linear-gradient(to right, #3BC975, #006633); /* Gradiente de color de fondo */
+    color: rgba(255, 255, 255, 0.5); /* Color de texto semi-transparente */
+}
+
+.contenedor__secundario{
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con opacidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra con desplazamiento y opacidad */
+    margin-top: 200px;
+}

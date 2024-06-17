@@ -157,7 +157,6 @@ body {
 /*PARTE DE LA SECCION PRINCIPAL DE LA PAGINA*/
 
 .contenedor__title {
-    /* Estilos del título dentro del contenedor de bienvenida */
     text-align: start; /* Alinear al centro */
     color: var(--color-fondo-principal); /* Color de acento 2 */
     font-weight: bold; /* Texto en negrita */
@@ -167,7 +166,6 @@ body {
 }
 
 .contenedor__subtitle {
-    /* Estilos del subtítulo dentro del contenedor de bienvenida */
     text-align: start; /* Alinear al centro */
     color: var(--color-fondo-principal); /* Color terciario */
     font-weight: bold; /* Texto en negrita */
@@ -177,7 +175,6 @@ body {
 }
 
 .contenedor__description {
-    /* Estilos de la descripción dentro del contenedor de bienvenida */
     text-align: start; /* Alinear al centro */
     color: var(--color-fondo-principal); /* Color de acento 1 */
     font-weight: bold; /* Texto en negrita */
@@ -186,36 +183,91 @@ body {
     margin-top: 20px;
 }
 
-.boton-continuar{
-    margin-top: 100px;
+.boton-continuar {
+    margin-top: 100px; /* Ajuste el margen superior según sea necesario */
 }
 
 .boton-continuar__link {
-    width: 800px; /* Ancho máximo */
-    height: 50px; /* Altura mínima */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    max-width: 500px; /* Ancho máximo */
+    min-height: 50px; /* Altura mínima */
     background-color: var(--color-texto-principal); /* Color de fondo principal */
     color: rgba(77, 167, 104, 0.5); /* Color de texto semi-transparente */
-    border: 1px solid #ccc; /* Borde sólido con color gris */
     font-weight: bold; /* Texto en negrita */
     cursor: pointer; /* Cursor apuntador */
     border-radius: 15px; /* Radio del borde */
     text-decoration: none;
+    display: inline-block; /* Asegurar que el botón se comporte como bloque en línea */
+    box-sizing: border-box; /* Incluir el borde en el cálculo total del tamaño */
+    padding: 10px 20px; /* Añadir relleno dentro del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    margin-left: 300px;
 }
 
 .boton-continuar__link:hover {
-    /* Estilos para cuando el mouse está sobre el botón de envío del formulario */
     background-image: linear-gradient(to right, #99E89D, #4DA768); /* Gradiente de color de fondo */
     color: rgba(255, 255, 255, 0.5); /* Color de texto semi-transparente */
 }
 
 .boton-continuar__link:active {
-    /* Estilos para cuando el botón de envío del formulario está activo (haciendo clic) */
     background-image: linear-gradient(to right, #3BC975, #006633); /* Gradiente de color de fondo */
     color: rgba(255, 255, 255, 0.5); /* Color de texto semi-transparente */
 }
 
-.contenedor__secundario{
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con opacidad */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra con desplazamiento y opacidad */
-    margin-top: 200px;
+
+.contenedor__secundario {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 200px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Centrar los elementos verticalmente */
 }
+
+.contenedor__texto {
+    position: relative;
+    flex: 1;
+    text-align: start; /* Alinear el texto al centro */
+}
+
+.contenedor__subtitle--secundario {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px; /* Añadir margen inferior al título */
+}
+
+.contenedor__description--secundario {
+    color: var(--color-texto-principal);
+    font-size: 20px; 
+    margin-bottom: 20px; /* Añadir margen inferior al párrafo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra con desplazamiento horizontal de 2px y vertical de 2px, difuminada 4px, y color RGBA semitransparente */
+}
+
+.contenedor__imagenes--secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar las imágenes horizontalmente */
+    margin-top: 20px; /* Añadir espacio encima de las imágenes */
+}
+
+.imagen-row {
+    display: flex;
+    gap: 10px; /* Reducir el espacio entre las imágenes */
+}
+.image__2{
+    margin-top: -250px;
+}
+
+
+
+
+
+
+
+
+

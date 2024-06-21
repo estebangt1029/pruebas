@@ -197,12 +197,9 @@ body {
 
 .welcome__description {
     /* Estilos de la descripción dentro del contenedor de bienvenida */
-    text-align: center; /* Alinear al centro */
-    color: var(--color-acento-1); /* Color de acento 1 */
-    font-weight: bold; /* Texto en negrita */
-    font-size: 17px; /* Tamaño de fuente */
-    margin-left: 300px; /* Margen izquierdo específico */
-    margin-top: -20px; /* Margen superior específico */
+    width: 109%;
+    position: relative;
+    left: -30px;
 }
 
 .form {
@@ -317,11 +314,12 @@ input:active {
     text-align: center; /* Alinear texto al centro */
     margin-bottom: 20px; /* Margen inferior */
     margin-top: -25px; /* Margen superior negativo para ajuste */
+    gap: 10px;
 }
 
 .social-login__button {
     /* Estilos de los botones de inicio de sesión social */
-    width: 25%; /* Ancho específico */
+    width: 40%; /* Ancho específico */
     margin: 5px; /* Margen */
     padding: 10px 20px; /* Relleno interno */
     border: none; /* Sin borde */
@@ -344,14 +342,13 @@ input:active {
 .create-account {
     /* Estilos del contenedor para crear una cuenta */
     display: flex; /* Mostrar como flexbox */
+    flex-direction: column;
     justify-content: center; /* Justificar contenido al centro */
     align-items: center; /* Alinear ítems al centro */
-    padding: var(--padding); /* Espaciado interno definido por la variable --padding */
 }
 
 .create-account .parrafo {
     /* Estilos del párrafo dentro del contenedor para crear una cuenta */
-    margin-right: 30px; /* Margen derecho */
     color: var(--color-acento-2); /* Color de acento 2 */
 }
 
@@ -422,6 +419,7 @@ input:active {
 .additional-info__secondary {
     display: flex; /* Contenedor flexible */
     align-items: center; /* Alinear elementos al centro verticalmente */
+    justify-content: center;
     gap: 15px; /* Espacio entre elementos */
 }
 
@@ -541,4 +539,49 @@ input:active {
 .footer__parrafo {
     text-align: center; /* Alinear texto al centro */
     font-weight: bold; /* Peso de la fuente */
+}
+
+
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 640px){
+    .esconder{
+        display: none;
+        width: 50%;
+    }
+    .botones{
+        justify-content: center;
+    }
+    .welcome {
+        /* Estilos del contenedor principal de bienvenida */
+
+        max-width: 90%; /* Ancho máximo del contenedor */
+        border-radius: 20px; /* Radio del borde */
+        margin-top: 70px; /* Margen superior específico */
+    }
+    .welcome__logo{
+        margin-top: -50px;
+    }
+    .welcome__logo>img{
+        width: 50px;
+    }
+    .welcome__description {
+        /* Estilos de la descripción dentro del contenedor de bienvenida */
+        width: 121%;
+    }
+    .additional-info__main {
+        display: flex; /* Contenedor de cuadrícula */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre columnas y filas */
+        padding: 20px; /* Padding */
+        text-align: center;
+    }
+    .additional-info__text_1 {
+        width: 100%; /* Ancho */
+        text-align: center; /* Alinear texto a la izquierda */
+    }
+   
 }
